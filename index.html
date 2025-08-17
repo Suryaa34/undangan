@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Undangan Pernikahan</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Splash / Cover -->
+  <section id="cover" class="cover">
+    <div class="cover-bg"></div>
+    <div class="cover-overlay"></div>
+    <div class="cover-inner">
+      <p class="to">Kepada Yth:</p>
+      <h2 id="guestName">Tamu Undangan</h2>
+      <h1 class="couple">Surya & Retno</h1>
+      <p class="date">30 November 2025</p>
+      <button id="openBtn" class="btn primary">🎉 Buka Undangan</button>
+    </div>
+    <audio id="bgm" loop>
+      <source src="assets/music.mp3" type="audio/mpeg"/>
+    </audio>
+  </section>
+
+  <!-- Navbar -->
+  <nav class="bottom-nav">
+    <a href="#home">Beranda</a>
+    <a href="#couple">Mempelai</a>
+    <a href="#event">Acara</a>
+    <a href="#gallery">Galeri</a>
+    <a href="#wish">Ucapan</a>
+  </nav>
+
+  <!-- Main -->
+  <main id="home" class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <p class="dear">Kepada Yth: <span id="guestInline">Tamu Undangan</span></p>
+      <h2 class="title">Undangan Pernikahan</h2>
+      <h1 class="couple">Surya & Retno</h1>
+      <p class="tagline">“Kami mohon doa restu atas pernikahan kami.”</p>
+      <div id="countdown" class="countdown"></div>
+      <a href="#event" class="btn">Lihat Detail ⬇️</a>
+    </div>
+  </main>
+
+  <section id="couple" class="section card">
+    <h2>Assalamu’alaikum Wr. Wb.</h2>
+    <p>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan kami.</p>
+    <div class="grid2">
+      <div class="person">
+        <img src="assets/bride.jpg" alt="Mempelai Wanita"/>
+        <h3>Retno</h3>
+        <p>Putri dari Bpk/Ibu ...</p>
+      </div>
+      <div class="person">
+        <img src="assets/groom.jpg" alt="Mempelai Pria"/>
+        <h3>Surya</h3>
+        <p>Putra dari Bpk/Ibu ...</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="event" class="section card">
+    <h2>Detail Acara</h2>
+    <p id="dateLong" class="date"></p>
+    <div class="grid2">
+      <div class="event-box">
+        <h3>Akad</h3>
+        <p id="akadTime">09.00 WIB</p>
+      </div>
+      <div class="event-box">
+        <h3>Resepsi</h3>
+        <p id="resepsiTime">11.00 – 14.00 WIB</p>
+      </div>
+    </div>
+    <p id="venue" class="venue">Gedung Serbaguna Bahagia, Jl. Mawar No. 10, Yogyakarta</p>
+    <div class="map">
+      <iframe id="mapsFrame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="center">
+      <a class="btn" id="gmapsBtn" target="_blank" rel="noopener">📍 Buka di Google Maps</a>
+    </div>
+    <div class="center rsvp">
+      <a id="waYes" class="btn success" target="_blank">✅ Konfirmasi Hadir</a>
+      <a id="waNo" class="btn danger" target="_blank">❌ Tidak Bisa Hadir</a>
+    </div>
+  </section>
+
+  <section id="gallery" class="section card">
+    <h2>Galeri</h2>
+    <div class="gallery">
+      <img src="assets/gallery1.jpg" alt="Galeri 1" class="gl"/>
+      <img src="assets/gallery2.jpg" alt="Galeri 2" class="gl"/>
+      <img src="assets/gallery3.jpg" alt="Galeri 3" class="gl"/>
+      <img src="assets/gallery4.jpg" alt="Galeri 4" class="gl"/>
+    </div>
+  </section>
+
+  <section id="wish" class="section card">
+    <h2>Ucapan & Doa</h2>
+    <form id="wishForm" class="wish-form">
+      <input type="text" id="wName" placeholder="Nama" required/>
+      <textarea id="wMsg" rows="3" placeholder="Tulis ucapan..." required></textarea>
+      <button type="submit" class="btn primary">Kirim Ucapan</button>
+    </form>
+    <ul id="wishList" class="wish-list"></ul>
+    <p class="muted small">Catatan: Ucapan tersimpan di perangkat ini (localStorage). Untuk database online, aktifkan Firebase di <code>config.js</code>.</p>
+  </section>
+
+  <footer class="footer">
+    <p>Terima kasih atas doa dan restunya. ❤️</p>
+  </footer>
+
+  <div id="lightbox" class="lightbox hidden">
+    <span id="lbClose">×</span>
+    <img id="lbImg" alt="preview"/>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
