@@ -4,9 +4,9 @@ window.WCFG = {
   brideName: "Retno",
   eventDateISO: "2025-11-30T09:00:00",
   akadTime: "09.00 WIB",
-  resepsiTime: "11.00 – 14.00 WIB",
-  venue: "Gedung Serbaguna Bahagia, Jl. Mawar No. 10, Yogyakarta",
-  gmapsUrl: "https://www.google.com/maps/place/Tugu+Yogyakarta",
+  resepsiTime: "10.00 – 14.00 WIB",
+  venue: "Sunstar Hotel Grindelwald",
+  gmapsUrl: "https://maps.app.goo.gl/2gCVbXTUxdFUkMc79",
 
   waNumber: "628125465512",
   waYes: "Halo {COUPLE}, saya {GUEST} akan HADIR di acara pernikahan. Terima kasih atas undangannya.",
@@ -14,7 +14,7 @@ window.WCFG = {
 
   // Firebase (opsional) — isi jika ingin ucapan tersimpan online
   firebase: {
-    enabled: false,
+    enabled: true,
     apiKey: "",
     authDomain: "",
     projectId: "",
